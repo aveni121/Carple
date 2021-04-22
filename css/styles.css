@@ -54,3 +54,8 @@ body {
   transform: translateY(7px);
   box-shadow: 0px 1px 8px var(--orange-shadow);
 }
+
+.format-field {
+  width: 100%;
+  height: 100%;
+}
