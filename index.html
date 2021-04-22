@@ -41,12 +41,12 @@
       <!-- Search Field -->
       <div class="row d-flex justify-content-center righteous-font">
         <div
-          class="col-5 search rounded-pill d-flex justify-content-center align-items-center p-1"
+          class="col-5 row search rounded-pill d-flex justify-content-center align-items-center p-1"
         >
           <!-- Residence -->
-          <div class="ms-3">
+          <div class="m-1 col-2">
             <label for="residence">Residence:</label>
-            <select id="residence" name="residence">
+            <select class="format-field" id="residence" name="residence">
               <option value="alviso">Alviso</option>
               <option value="north san jose">North San Jose</option>
               <option value="alum rock">Alum Rock</option>
@@ -68,14 +68,14 @@
             </select>
           </div>
           <!-- Workplace -->
-          <div class="ms-3">
+          <div class="m-1 col-2">
             <label for="workplace">Workplace:</label>
-            <input type="text" id="workplace" />
+            <input class="format-field" type="text" id="workplace" />
           </div>
           <!-- Start Time -->
-          <div class="ms-3">
-            <label for="start-time">Start Time:</label>
-            <select id="start-time" name="start-time">
+          <div class="m-1 col-2">
+            <label for="start-time">Start:</label>
+            <select class="format-field" id="start-time" name="start-time">
               <option value="4:00 am">4:00 am</option>
               <option value="5:00 am">5:00 am</option>
               <option value="6:00 am">6:00 am</option>
@@ -100,9 +100,9 @@
             </select>
           </div>
           <!-- End Time -->
-          <div class="ms-3">
-            <label for="end-time">End Time:</label>
-            <select id="end-time" name="end-time">
+          <div class="m-1 col-2">
+            <label for="end-time">End:</label>
+            <select class="format-field" id="end-time" name="end-time">
               <option value="4:00 am">4:00 am</option>
               <option value="5:00 am">5:00 am</option>
               <option value="6:00 am">6:00 am</option>
@@ -127,8 +127,15 @@
             </select>
           </div>
           <!-- Submit -->
-          <div class="ms-3">
-            <input type="submit" id="submit" value="Search" />
+          <div class="m-1 col-2">
+            <label for="submit">Submit:</label>
+            <input
+              class="format-field"
+              name="submit"
+              type="submit"
+              id="submit"
+              value="Search"
+            />
           </div>
         </div>
       </div>
@@ -137,10 +144,10 @@
         class="row flex-row d-flex justify-content-center align-items-center mt-2 righteous-font"
       >
         <div class="col-2 d-flex justify-content-center buttons-bg m-4 p-2">
-          <h1>Look for Carples</h1>
+          <h1 class="text-center">Look for Carples</h1>
         </div>
         <div class="col-2 d-flex justify-content-center buttons-bg p-2">
-          <h1>Create a Carple</h1>
+          <h1 class="text-center">Create a Carple</h1>
         </div>
       </div>
       <!-- Pick up from here -->
