@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+:root {
+  --main-bg-color: rgb(0, 255, 242);
+  --blue-color: rgb(0, 72, 255);
+  --dark-blue-color: rgb(0, 19, 53);
+  --nature-green-color: rgb(35, 162, 35);
+  --nature-green-shadow: rgb(23, 94, 23);
+  --orange-color: rgb(255, 123, 0);
+  --orange-shadow: rgb(148, 84, 0);
+  --main-font-color: white;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+.bg-blue {
+  background-color: var(--blue-color);
+}
+
+.righteous-font {
+  font-family: "Righteous", cursive;
+  color: var(--main-font-color) !important;
+}
+
+.navbar-font-size {
+  font-size: 30px;
+}
+
+.header-font {
+  font-size: 60px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.menu-bg {
+  background-image: url("../images/scrolling-city-bg.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.search {
+  background-color: var(--nature-green-color);
+  box-shadow: 2px 2px 4px var(--nature-green-shadow);
+}
+
+.buttons-bg {
+  background-color: var(--orange-color);
+  box-shadow: 0px 8px 8px var(--orange-shadow);
+  transition: 0.2s;
+}
+
+.buttons-bg:active {
+  transform: translateY(7px);
+  box-shadow: 0px 1px 8px var(--orange-shadow);
+}

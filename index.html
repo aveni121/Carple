@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Carple</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+      <div class="container-fluid d-flex justify-content-start">
+        <a
+          class="navbar-brand righteous-font navbar-font-size m-0 p-0"
+          href="index.html"
+          >Carple<i class="fas fa-running"></i><i class="fas fa-car-side"></i
+        ></a>
+      </div>
+    </nav>
+    <!-- Main Menu -->
+    <div class="row menu-bg">
+      <!-- Logo -->
+      <div class="row righteous-font container-fluid m-3 header-font">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <span
+            >Carple<i class="fas fa-running"></i><i class="fas fa-car-side"></i
+          ></span>
+          <h6>(Carpool: Cars + People = Carple)</h6>
+        </div>
+      </div>
+      <!-- Search Field -->
+      <div class="row d-flex justify-content-center righteous-font">
+        <div
+          class="col-5 search rounded-pill d-flex justify-content-center align-items-center p-1"
+        >
+          <!-- Residence -->
+          <div class="ms-3">
+            <label for="residence">Residence:</label>
+            <select id="residence" name="residence">
+              <option value="alviso">Alviso</option>
+              <option value="north san jose">North San Jose</option>
+              <option value="alum rock">Alum Rock</option>
+              <option value="little portugal">Little Portugal</option>
+              <option value="mayfair">Mayfair</option>
+              <option value="japantown">Japantown</option>
+              <option value="downtown">Downtown</option>
+              <option value="little italy">Little Italy</option>
+              <option value="the alameda">The Alameda</option>
+              <option value="rose garden">Rose Garden</option>
+              <option value="santana row">Santana Row</option>
+              <option value="west san jose">West San Jose</option>
+              <option value="willow glen">Willow Glen</option>
+              <option value="little saigon">Little Saigon</option>
+              <option value="south san jose">South San Jose</option>
+              <option value="evergreen">Evergreen</option>
+              <option value="almaden valley">Almaden Valley</option>
+              <option value="naglee park">Naglee Park</option>
+            </select>
+          </div>
+          <!-- Workplace -->
+          <div class="ms-3">
+            <label for="workplace">Workplace:</label>
+            <input type="text" id="workplace" />
+          </div>
+          <!-- Start Time -->
+          <div class="ms-3">
+            <label for="start-time">Start Time:</label>
+            <select id="start-time" name="start-time">
+              <option value="4:00 am">4:00 am</option>
+              <option value="5:00 am">5:00 am</option>
+              <option value="6:00 am">6:00 am</option>
+              <option value="7:00 am">7:00 am</option>
+              <option value="8:00 am">8:00 am</option>
+              <option value="9:00 am">9:00 am</option>
+              <option value="10:00 am">10:00 am</option>
+              <option value="11:00 am">11:00 am</option>
+              <option value="12:00 pm">12:00 pm</option>
+              <option value="1:00 pm">1:00 pm</option>
+              <option value="2:00 pm">2:00 pm</option>
+              <option value="3:00 pm">3:00 pm</option>
+              <option value="4:00 pm">4:00 pm</option>
+              <option value="5:00 pm">5:00 pm</option>
+              <option value="6:00 pm">6:00 pm</option>
+              <option value="7:00 pm">7:00 pm</option>
+              <option value="8:00 pm">8:00 pm</option>
+              <option value="9:00 pm">9:00 pm</option>
+              <option value="10:00 pm">10:00 pm</option>
+              <option value="11:00 pm">11:00 pm</option>
+              <option value="12:00 am">12:00 am</option>
+            </select>
+          </div>
+          <!-- End Time -->
+          <div class="ms-3">
+            <label for="end-time">End Time:</label>
+            <select id="end-time" name="end-time">
+              <option value="4:00 am">4:00 am</option>
+              <option value="5:00 am">5:00 am</option>
+              <option value="6:00 am">6:00 am</option>
+              <option value="7:00 am">7:00 am</option>
+              <option value="8:00 am">8:00 am</option>
+              <option value="9:00 am">9:00 am</option>
+              <option value="10:00 am">10:00 am</option>
+              <option value="11:00 am">11:00 am</option>
+              <option value="12:00 pm" selected="true">12:00 pm</option>
+              <option value="1:00 pm">1:00 pm</option>
+              <option value="2:00 pm">2:00 pm</option>
+              <option value="3:00 pm">3:00 pm</option>
+              <option value="4:00 pm">4:00 pm</option>
+              <option value="5:00 pm">5:00 pm</option>
+              <option value="6:00 pm">6:00 pm</option>
+              <option value="7:00 pm">7:00 pm</option>
+              <option value="8:00 pm">8:00 pm</option>
+              <option value="9:00 pm">9:00 pm</option>
+              <option value="10:00 pm">10:00 pm</option>
+              <option value="11:00 pm">11:00 pm</option>
+              <option value="12:00 am">12:00 am</option>
+            </select>
+          </div>
+          <!-- Submit -->
+          <div class="ms-3">
+            <input type="submit" id="submit" value="Search" />
+          </div>
+        </div>
+      </div>
+      <!-- Buttons for exlporing -->
+      <div
+        class="row flex-row d-flex justify-content-center align-items-center mt-2 righteous-font"
+      >
+        <div class="col-2 d-flex justify-content-center buttons-bg m-4 p-2">
+          <h1>Look for Carples</h1>
+        </div>
+        <div class="col-2 d-flex justify-content-center buttons-bg p-2">
+          <h1>Create a Carple</h1>
+        </div>
+      </div>
+      <!-- Pick up from here -->
+      <div>Carple</div>
+      <div>Carple</div>
+      <div>Carple</div>
+    </div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
