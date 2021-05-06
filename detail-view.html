@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Carple</title>
+  </head>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+    <div class="container-fluid d-flex justify-content-start">
+      <a class="navbar-brand righteous-font navbar-font-size" href="index.html"
+        >Carple<i class="fas fa-running"></i><i class="fas fa-car-side"></i
+      ></a>
+    </div>
+  </nav>
+  <body>
+    <div class="container-fluid righteous-font">
+        <div class="row justify-content-center m-4">
+          <div
+            class="col-10 bg-blue d-flex flex-row justify-content-between p-4"
+          >
+            <h1>
+              <i style="color: lightgreen" class="fas fa-home"></i>
+              <span id="residence">Residence</span>
+              <i class="fas fa-long-arrow-alt-right"></i>
+              <i style="color: red" class="fas fa-map-marker-alt"></i>
+              <span id="workplace">Destination</span>
+            </h1>
+            <h1>
+              <span id="start-time">Start</span>
+              -
+              <span id="end-time">End</span>
+            </h1>
+          </div>
+          <div class="col-10 p-4 bg-green">
+            <h3>Discussion:</h3>
+            <div class="container-fluid" id="discussion">
+              <!-- Inserted Content Goes here -->
+            </div>
+          </div>
+          <div class="col-10 p-4 bg-green d-flex flex-row align-items-center">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="m-2">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname">
+              </div>
+              <div class="m-2">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname">
+              </div>
+              <div class="m-2">
+                <label for="contactNum">Contact # :</label>
+                <input type="number" id="contactNum" name="contactNum">
+              </div>
+            </div>
+            <div>
+              <textarea class="m-2 text-area-large" rows="5" cols="120" id="discussionEntry" name="discussionEntry"></textarea>
+            </div>
+            <div class="m-5">
+              <h1 class="buttons-bg-enabled p-4" id="post-button">Post</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="scripts/detail-view.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
