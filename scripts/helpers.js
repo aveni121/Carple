@@ -7,3 +7,7 @@ export function capitalizeEachWord(str) {
 
   return strArr.join(" ");
 }
+
+export function sleep(secs) {
+  return new Promise((resolve) => setTimeout(resolve, secs * 1000));
+}

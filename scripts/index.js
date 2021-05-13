@@ -8,10 +8,11 @@ fetch(
   .then((response) => response.json())
   .then((data) => {
     DATA = data;
-    console.log("DATA INITIALIZED");
+    console.log("DATA INITIALIZED", DATA);
   });
 
 const FIELDS = ["residence", "workplace", "start_time", "end_time"];
+const userIsLoggedIn = localStorage.getItem("loggedIn");
 
 //Elements
 //Inputs
@@ -25,10 +26,6 @@ var submitButton = document.getElementById("submit");
 var listViewButton = document.getElementById("list-view");
 var createViewButton = document.getElementById("create-view");
 
-//Sorting List View
-var sortButton;
-var sortBy;
-
 //Variable Content Container
 var contentContainer = document.getElementById("contentDisplayed");
 
@@ -36,8 +33,29 @@ var contentContainer = document.getElementById("contentDisplayed");
 submitButton.addEventListener("click", filterRecords);
 listViewButton.addEventListener("mouseup", () => renderListView(DATA.records));
 createViewButton.addEventListener("mouseup", () => {
-  window.location.href = "../create-view.html";
+  if (userIsLoggedIn) {
+    window.location.href = "../create-view.html";
+  } else {
+    alert("Please login in order to Create a Carple!");
+  }
 });
+
+//login links
+var loginLinks = document.getElementById("login-links");
+document.body.onload = renderLoginLinks();
+
+function renderLoginLinks() {
+  console.log("Rendering login links");
+  if (userIsLoggedIn) {
+    loginLinks.innerHTML = `
+    <a href="index.html" id="logout">• Logout</a>
+    `;
+    var logout = document.getElementById("logout");
+    logout.addEventListener("click", () => {
+      localStorage.clear();
+    });
+  }
+}
 
 //Function used to search for a matching etry
 function filterRecords() {
@@ -45,12 +63,24 @@ function filterRecords() {
     alert("ERROR: Please enter a workplace!");
   } else {
     var matchFound = false;
+    var exactMatchIndex = -1;
     var matchedRecords = [];
     for (var i = 0; i < DATA.records.length; i++) {
       matchFound = isMatch(DATA.records[i]);
       if (matchFound) {
         matchedRecords.push(DATA.records[i]);
+        exactMatchIndex = i;
         console.log("MATCH FOUND:", DATA.records[i]);
+      }
+    }
+
+    for (var j = 0; j < DATA.records.length; j++) {
+      if (exactMatchIndex != j) {
+        matchFound = isMatchPartly(DATA.records[j]);
+        if (matchFound) {
+          matchedRecords.push(DATA.records[j]);
+          console.log("MATCH FOUND:", DATA.records[j]);
+        }
       }
     }
   }
@@ -83,12 +113,36 @@ function isMatch(record) {
   for (var j = 0; j < FIELDS.length; j++) {
     const tableEntry = record.fields[FIELDS[j]].toLowerCase();
     const userEntry = userInput[FIELDS[j]].toLowerCase();
-    if (tableEntry != userEntry) {
+    if (!tableEntry.includes(userEntry)) {
       return false;
     }
   }
 
   return true;
+}
+
+function isMatchPartly(record) {
+  var matches = 0;
+  var fieldsToCheck = ["residence", "workplace"];
+  var userInput = {
+    residence: residenceInput.value,
+    workplace: workplaceInput.value,
+  };
+
+  //check each field for match
+  for (var j = 0; j < fieldsToCheck.length; j++) {
+    const tableEntry = record.fields[fieldsToCheck[j]].toLowerCase();
+    const userEntry = userInput[fieldsToCheck[j]].toLowerCase();
+    if (tableEntry.includes(userEntry)) {
+      matches++;
+    }
+  }
+
+  if (matches > 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 //renders a list view of table entries
